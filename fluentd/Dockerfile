@@ -21,6 +21,7 @@ RUN rpmkeys --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7 && \
       ruby \
       ruby-devel \
       libcurl-devel \
+      zlib-devel \
       make \
       iproute && \
     yum clean all
@@ -30,6 +31,8 @@ RUN mkdir -p ${HOME} && \
       'activesupport:<5' \
       fluent-plugin-kubernetes_metadata_filter \
       fluent-plugin-elasticsearch \
+      nokogiri:1.6.8.1 \
+      fluent-plugin-azurestorage \
       'fluent-plugin-systemd:<0.1.0' \
       systemd-journal \
       fluent-plugin-rewrite-tag-filter \
